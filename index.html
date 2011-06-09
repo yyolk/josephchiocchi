@@ -69,6 +69,11 @@
 		font-style: italic;
 		font-weight: thin;
 	}
+    .indent{
+        margin-left:20px;
+
+
+    }
 	
 	div#infopara a{
 		text-decoration: none;
@@ -87,7 +92,18 @@
 		
 	}
 
+        /* space */
+        .space{
+            margin-top: 10px;
+            border:0;
+            width:0
+        }
 
+        p { 
+            line-height:1.7em;
+        }
+
+        /*  */
 	-->
 	</style>
 	<script type="text/javascript" src="processing-0.9.1.js"></script>
@@ -132,12 +148,17 @@
 <canvas id="canvas" datasrc="colorrot.pjs" width="300" height="300"></canvas>
 </div> <!-- end bgcolorrot -->
 <div id="info" class="page">
-<p>Joseph <abbr title="Key-Yolk-Key">Chiocchi</abbr> creates <a href="http://www.flickr.com/photos/35641921@N06/"><em>images</em></a>, <em>objects</em>, and <a href="http://patternsaremyfeelings.tumblr.com"><em>ideas</em></a>.</p>
+    <p>Joseph <abbr title="Key-Yolk-Key">Chiocchi</abbr> creates <a href="http://flow.yolk.cc/"><em>images</em></a>, <a href="http://cargocollective.com/yolk"><em>objects</em></a>, and <a href="http://patternsaremyfeelings.tumblr.com"><em>ideas</em></a>.</p>
 
 </div>
 <div id="infopara">
-<p>He also goes by <strong><a href="http://yolk.cc">Y O L K</a></strong> and <a href="http://twitter.com/yyolk">tweets</a> once in a while.</p>
+    <p>He also goes by <strong><a href="http://yolk.cc">Y O L K</a></strong> and <a href="http://twitter.com/yyolk">tweets</a> once in a while.</p>
+    <div class='indent'>
+<hr class='space'>
 <p><a href="mailto:_@yolk.cc">Email him.</a></p>
+<hr class='space'>
+<p><a href="http://cargocollective.com/yolk">Portfolio</a></p>
+    </div>
 </div>
 
 </body>
