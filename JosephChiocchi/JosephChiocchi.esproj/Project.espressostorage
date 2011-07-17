@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>com.macrabbit.Espresso.Publisher.PublishServers</key>
+	<array>
+		<dict>
+			<key>ESPublishServerStateAskForPasswordWhenConnectingKey</key>
+			<false/>
+			<key>ESPublishServerStateDeriveServerTimeOffsetAutomaticallyKey</key>
+			<true/>
+			<key>ESPublishServerStateHostKey</key>
+			<string>ozwash.org</string>
+			<key>ESPublishServerStateMaximumAllowedConnectionsKey</key>
+			<integer>1</integer>
+			<key>ESPublishServerStateMinimumUpdateTimeDifferenceKey</key>
+			<real>60</real>
+			<key>ESPublishServerStateModeKey</key>
+			<integer>0</integer>
+			<key>ESPublishServerStateNameKey</key>
+			<string>ozwash.org</string>
+			<key>ESPublishServerStateOptionsKey</key>
+			<dict>
+				<key>FSFTPTransferModeOptionKey</key>
+				<string>FSFTPAutomaticTransferMode</string>
+			</dict>
+			<key>ESPublishServerStatePathKey</key>
+			<string>/home/joe/josephchiocchi</string>
+			<key>ESPublishServerStatePortKey</key>
+			<integer>22</integer>
+			<key>ESPublishServerStateSavedMergeOperationMasksKey</key>
+			<dict>
+				<key>sftp://joe@ozwash.org:22</key>
+				<dict>
+					<key>/home/joe/josephchiocchi/josephchiocchi.sublime-project</key>
+					<integer>1073741824</integer>
+				</dict>
+			</dict>
+			<key>ESPublishServerStateServerTimeOffsetKey</key>
+			<real>-3600</real>
+			<key>ESPublishServerStateTypeKey</key>
+			<string>SFTP</string>
+			<key>ESPublishServerStateUserKey</key>
+			<string>joe</string>
+		</dict>
+	</array>
+	<key>com.macrabbit.Espresso.Publisher.PublishServers.Order</key>
+	<array>
+		<integer>0</integer>
+	</array>
+</dict>
+</plist>

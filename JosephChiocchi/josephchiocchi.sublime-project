@@ -1,0 +1,7 @@
+<!-- Documentation is available at http://www.sublimetext.com/docs/projects -->
+<project>
+	<mount dir="." include="*.html,*.js,*.htm" exclude="*.png,*.jpg,*.exe,*.dll,*.obj" direxclude=".svn,.git,.hg,CVS,bin"/>
+	<options>
+
+	</options>
+</project>
