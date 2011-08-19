@@ -7,80 +7,81 @@
 	<title>Joseph Chiocchi</title>
 	<link rel="shortcut icon" href="favicon.ico">
 	
-	<style type="text/css" media="screen"><!--
-	* {margin:0;padding:0;background:#fff;color:#000;}
-	body {
+    <style type="text/css" media="screen">
+    <!--
+	* {margin:0;padding:0;}
+    
+    body {
+        background-color: #fff;
 		font-family:"Droid Sans", Helvetica, Arial, sans-serif; font-size:18pt;
-	}
-	div.page{
+    }
+
+    div.page{
 		position:absolute;
 		height:auto;
-		width:auto;
+        width:auto;
+        background-color:#fff;
 	}
-	div#info{
-		position:absolute;
-		margin:0;
-		padding:0;
-		top:45px;
-		left:45px;
-		padding:2px 0;
-		background:#fff;
-		padding:10px;
-		color:#000;
-		margin:10px;
-		line-height:1.7em;
-		-moz-box-shadow: 5px 5px 10px rgba(40,40,40,0.3);
-	    -webkit-box-shadow: 5px 5px 10px rgba(40,40,40,0.3);
-	  	box-shadow: 5px 5px 10px rgba(40,40,40,0.3);
-	}
-	div#info em{
-			color:#000;
-            padding:3px;
-            margin:3px;
-		}
-		
-	div#info a{
-		text-decoration: none;
-		background: #fff;
-		color: #000;
-		padding: 3px;
-	}
-    
 
-        /* change hover color for images and objects */
+    /* Header */
+        div#info{
+            position:absolute;
+            margin:0;
+            padding:0;
+            top:45px;
+            left:45px;
+            padding:2px 0;
+            padding:10px;
+            color:#000;
+            margin:10px;
+            line-height:1.7em;
+            -moz-box-shadow: 5px 5px 10px rgba(40,40,40,0.3);
+            -webkit-box-shadow: 5px 5px 10px rgba(40,40,40,0.3);
+            box-shadow: 5px 5px 10px rgba(40,40,40,0.3);
+        }
+        div#info em{
+                color:#000;
+                padding:3px;
+                margin:3px;
+            }
+            
+        div#info a{
+            text-decoration: none;
+            background: #fff;
+            color: #000;
+            padding: 3px;
+        }
+        
 
+        div#info a:hover em {
+            color: #fff;
+            /*        background-color: #F9FF36; */
+            background-color: #000;
+            padding:6px;
+            margin:0;
+        }
 
-
-	div#info a:hover em {
-		color: #fff;
-        /*        background-color: #F9FF36; */
-        background-color: #000;
-        padding:6px;
-        margin:0;
-	}
-	/*p {display:block;padding:10px;color:#fff;background-color:#000;margin:10px;line-height:1.7em;}*/
-
-	div#infopara{
-		position: absolute;
-		top: 120px;
-		left: 55px;
-		padding: 10px;
-		color: #000;
-		font-family: Georgia, serif;
-		-moz-box-shadow: 5px 5px 10px rgba(40,40,40,0.3);
-		-webkit-box-shadow: 5px 5px 10px rgba(40,40,40,0.3);
-		box-shadow: 5px 5px 10px rgba(40,40,40,0.3);
-	}
-	
-	div#infopara p{
-		font-size: 15px;
-		font-style: italic;
-		font-weight: thin;
-	}
+    /* Info and links */
+        div#infopara{
+            position: absolute;
+            top: 120px;
+            left: 55px;
+            padding: 10px;
+            color: #000;
+            font-family: Georgia, serif;
+            -moz-box-shadow: 5px 5px 10px rgba(40,40,40,0.3);
+            -webkit-box-shadow: 5px 5px 10px rgba(40,40,40,0.3);
+            box-shadow: 5px 5px 10px rgba(40,40,40,0.3);
+        }
+        
+        div#infopara p{
+            font-size: 15px;
+            font-style: italic;
+            font-weight: thin;
+        }
+   
     .indent{
         margin-left:20px;
-
-
     }
 	
 	div#infopara a{
@@ -124,29 +125,21 @@
         /*  */
 	-->
 	</style>
-	<script type="text/javascript" src="processing-0.9.1.js"></script>
-	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/mootools/1.2.1/mootools-yui-compressed.js"></script>
+	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.js"></script>
+    <script type="text/javascript" src="js/jquery.color.js" charset="utf-8"></script>
 	<script type="text/javascript">
-		var hascanvas = function(){
-			var windowsize = window.getSize();
-			var canvas = $("canvas").getElement('canvas');
-			var container = $("bgcolorrot").getElement('bgcolorrot');
-			//var canvassize = canvas.getSize();
-			
-			$('canvas').setStyle('width',windowsize.x);
-			$('canvas').setStyle('height',windowsize.y);
-			$('bgcolorrot').setStyle('width',windowsize.x);
-			$('bgcolorrot').setStyle('height',windowsize.y);
-			
-		}
-		function refigure(){
-			hascanvas();
-			if(Browser.Engine.gecko) setTimeout(hascanvas,50);
-		
-		}
-		window.addEvent('resize',refigure);
-		window.addEvent('load',refigure);
-		</script>
+        $($(document).ready(function() {
+                
+                spectrum();
+                
+                function spectrum(){
+                    var hue = 'rgb(' + (Math.floor(Math.random() * 256)) + ',' + (Math.floor(Math.random() * 256)) + ',' + (Math.floor(Math.random() * 256)) + ')';
+                    $('body').animate( { backgroundColor: hue }, 1000);
+                    spectrum(); 
+                }
+                
+        }));
+    </script>
 </head>
 <body>
 <script type="text/javascript">
@@ -162,64 +155,82 @@
   })();
 
 </script>
-<div id="bgcolorrot">
-<canvas id="canvas" datasrc="colorrot.pjs" width="300" height="300"></canvas>
-</div> <!-- end bgcolorrot -->
+
 <div id="info" class="page">
+
     <p>Joseph <abbr title="Key-Yolk-Key">Chiocchi</abbr> creates <a href="http://flickr.com/photos/yyolk/"><em>images</em></a> and <a href="http://vimeo.com/yyolk"><em>video</em></a>.</p>
 
 </div>
-<div id="infopara">
-    <div class='indent'>
-<hr class='space'>
-<p><a href="mailto:_@yolk.cc">Email him.</a></p>
-<hr class='space'>
-<p>
-    <a href="https://docs.google.com/viewer?a=v&pid=explorer&chrome=true&srcid=0B8IN6XOKkwRTOTU1ZTVlOGUtMTAwMy00ZWJjLTk3OTAtZDQzMjgxNzRhZGNh&hl=en_US">CV</a>
-</p>
-<p>
-    <a href="http://work.yolk.cc">Portfolio / Work</a>
-</p>
 
-<hr class='space'>
-<p><a href="http://flickr.com/photos/yyolk">Flickr</a></p>
-<p>
-<a href="http://vimeo.com/yyolk">Vimeo</a>
-</p>
-<p>
-    <a href="http://soundcloud.com/yolk">Soundcloud</a>
-</p>
-<hr class='space'>
-<p>
-    <a href="http://flow.yolk.cc">FLOW (&asymp;)</a>
-</p>
-<p>
-    <a href="http://patternsaremyfeelings.tumblr.com">PATTERNS ARE MY FEELINGS</a>
-</p>
-<p>
-    <a href="http://yolk.cc">Y O L K</a>
-</p>
-<p>
-    <a href="http://fundamentals.yolk.cc">Fundamentals</a>
-</p>
-<p>
-    <a href="http://listentomyheart.cc">LISTEN TO MY HEART</a>
-</p>
-<p>
-    <a href="http://bit.ly/BROADCAST">((BROADCAST))</a>
-</p>
-<hr class='space'>
-<p>
-    <a href="http://trunk.ly/yolk/">Trunk.ly</a>
-</p>
-<p>
-    <a href="http://pinboard.in/u:yolk">Pinboard</a>
-    </p>
-    <p>
-        <a href="https://picasaweb.google.com/input.output">Outputs</a>
-    </p>
+<div id="infopara" class="page">
+    <div class='indent'>
+       
+        <hr class='space'>
+       
+        <p><a href="mailto:_@yolk.cc">Email</a></p>
+       
+        <hr class='space'>
+       
+        <p>
+            <a href="https://docs.google.com/viewer?a=v&pid=explorer&chrome=true&srcid=0B8IN6XOKkwRTOTU1ZTVlOGUtMTAwMy00ZWJjLTk3OTAtZDQzMjgxNzRhZGNh&hl=en_US">CV</a>
+        </p>
+        <p>
+            <a href="http://work.yolk.cc">Portfolio / Work</a>
+        </p>
+
+        <hr class='space'>
+       
+        <p><a href="http://flickr.com/photos/yyolk">Flickr</a></p>
+        <p>
+        <a href="http://vimeo.com/yyolk">Vimeo</a>
+        </p>
+        <p>
+            <a href="http://soundcloud.com/yolk">Soundcloud</a>
+        </p>
+       
+    </div>
+
+        <hr class='space'>
+
+    <p>Websites:</p>
+    <div class='indent'>
+        <p>
+            <a href="http://flow.yolk.cc">FLOW (&asymp;)</a>
+        </p>
+        <p>
+            <a href="http://patternsaremyfeelings.tumblr.com">PATTERNS ARE MY FEELINGS</a>
+        </p>
+        <p>
+            <a href="http://yolk.cc">Y O L K</a>
+        </p>
+        <p>
+            <a href="http://fundamentals.yolk.cc">Fundamentals</a>
+        </p>
+        <p>
+            <a href="http://listentomyheart.cc">LISTEN TO MY HEART</a>
+        </p>
+        <p>
+            <a href="http://bit.ly/BROADCAST">((BROADCAST))</a>
+        </p>
+    </div>
+
+        <hr class='space'>
+    
+    <p>Elsewhere:</p> 
+    <div class='indent'>
+        <p>
+            <a href="http://trunk.ly/yolk/">Trunk.ly</a>
+        </p>
+        <p>
+            <a href="http://pinboard.in/u:yolk">Pinboard</a>
+        </p>
+        <p>
+            <a href="https://picasaweb.google.com/input.output">Outputs</a>
+        </p>
     </div>
 </div>
 
 </body>
 </html>
+
+
