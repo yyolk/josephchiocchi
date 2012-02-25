@@ -1,0 +1,91 @@
+@import "compass/reset";
+@import "compass/css3";
+
+body{
+    font-size:18pt;
+    font-family: Georgia, serif;
+    background-color: #fff;
+}
+
+.page {
+
+    position:absolute;
+    height:auto;
+    width:auto;
+    background-color:#fff;
+}
+#info {
+    position:absolute;
+    top:45px;
+    left:45px;
+    padding:10px;
+    margin:10px;
+
+    em{
+        color: #000;
+        padding: 3px;
+        margin: 3px;
+        font-style: italic;
+    }
+    a{
+        text-decoration: none;
+        background-color: #fff;
+        color: #000;
+        padding: 3px;
+    }
+    
+    a:hover em{
+        color: #fff;
+        background-color: #000;
+        padding:6px;
+        margin:0;
+
+    }
+    @include single-box-shadow(rgba(40,40,40,0.3), 5px, 5px, 10px);
+
+}
+
+#infopara{
+
+    position: absolute;
+    top: 120px;
+    left: 55px;
+    padding: 10px;
+    color: #000;
+    @include single-box-shadow(rgba(40,40,40,0.3), 5px, 5px, 10px);
+
+    p {
+        font-size: 15px;
+        font-style: italic;
+        font-weight: thin;
+    }
+
+    a:hover { 
+        color: #000;
+        background-color: #F9FF36;
+        border-bottom: 1px dashed #000;
+    }
+
+}
+
+#bgcolorrot{
+    overflow:hidden;
+    margin:0;
+    padding:0;
+}
+
+
+.space { 
+    margin-top: 10px;
+    border:0;
+    width:0;
+}
+
+p {
+
+    line-height: 1.7em;
+}
+
+.indent{
+    margin-left: 20px;
+}

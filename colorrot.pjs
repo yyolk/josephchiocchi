@@ -1,0 +1,26 @@
+int wd=300;
+int hd=300;
+
+
+void setup(){
+	size(wd,hd);
+    
+    frameRate(1);
+    background(#FFFFFF);
+    strokeWeight(15);
+}
+
+void draw(){
+	
+	
+	if (mousePressed){
+		background(0);
+	}else{
+		randCDraw();	
+	}
+
+}
+
+void randCDraw(){
+	background(random(255),random(255),random(255));
+}
